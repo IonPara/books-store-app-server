@@ -42,15 +42,10 @@ const {
 
 // Here are all of the users routes
 router.post("/login", checkContentType, login);
-router.post("/signUp", upload.single("photo"), signUp);
+router.post("/signUp", checkContentType, signUp);
 router.get("/:username", checkContentType, checkJWTToken, getUsers);
 router.put("/order", checkContentType, addOrderedBook);
-router.patch(
-  "/changeDetails",
-  upload.single("photo"),
-  checkJWTToken,
-  editDetails
-);
+router.patch("/changeDetails", checkContentType, checkJWTToken, editDetails);
 router.put(
   "/changePassword",
   checkJWTToken,

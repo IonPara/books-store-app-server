@@ -66,8 +66,7 @@ function checkJWTToken(req, res, next) {
 // It will create a new user document with username and password
 // If something doesn't it will send an error message
 async function signUp(req, res, next) {
-  const { name, password, username } = req.body;
-  const photo = req.file ? req.file.path : "";
+  const { name, password, username, photo } = req.body;
   const userExists = await User.findOne({ username: username });
   if (
     !userExists &&
@@ -76,11 +75,11 @@ async function signUp(req, res, next) {
   ) {
     const newUser = new User({
       name: name,
-      username: username,
-      password: password,
+      username,
+      password,
       borrowed: [],
       ordered: [],
-      photo: photo,
+      photo,
       type: "Regular user",
     });
     try {
@@ -211,8 +210,7 @@ async function changePassword(req, res) {
 
 // this middleware will edit the details of the user
 async function editDetails(req, res) {
-  const { username, newUsername, name } = req.body;
-  const photo = req.file ? req.file.path : "";
+  const { username, newUsername, name, photo } = req.body;
   const user = await User.findOne({ username });
   if (user) {
     try {
