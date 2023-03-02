@@ -1,4 +1,4 @@
-# Just Read - Server Side
+# [Just Read]( https://just-read.onrender.com/) - Server Side
 
 📃 **Content:**
 - [General Information ](#General-Information)
@@ -11,10 +11,19 @@ This repository is the backend of a full stack MERN application.
 Just Read is a book store app where the user can create an account, search for his/her favorite books, purchase a book and leave a review.
 The application allows for normal end-user access and admin access. An administrator can monitor and make changes to user's behaviour.
 
+The books data is pulled from [google books api](https://developers.google.com/books).
 
-The app is built using Express, React, and MongoDB (the MERN stack).<br>
-● It creates, reads, updates, and deletes (CRUD) information from MongoDB.<br>
-● It authenticates users using JWT<br>
+
+The app is built using MongoDB, Express, React, and Node.js (the MERN stack).<br>
+<pre>● It creates, reads, updates, and deletes (CRUD) information from MongoDB.</pre>
+
+<b>Here are some of the measures taken to ensure the security of this app:</b> <br>
+<pre>● The app authenticates users using JWT to safely transmit the information between client and server.
+● The API keys are saved as environment variables.</pre> 
+
+:floppy_disk: The app was deployed on [render.com](render.com)
+ <pre>  Back-end and front-end separately to make the app safer and easier to debug.</pre>
+
 The goal of this project is to showcase the ability to build and deploy a full stack application. 
 
 ### 🔣 <a id="languages">Technoloogies used </a>:
@@ -37,8 +46,6 @@ The goal of this project is to showcase the ability to build and deploy a full s
 </p>
 
 
-### :floppy_disk: Deployed on [render.com](render.com)
-
 ## 📘 <a id="setup">Setup</a>:
 
 ## You can visualise it by clicking on the link [here](https://just-read.onrender.com/)
@@ -48,8 +55,10 @@ The goal of this project is to showcase the ability to build and deploy a full s
 1. [Download client side zip file](https://github.com/IonPara/books-store-app-client/archive/refs/heads/main.zip)
 2. [Download server zip file](https://github.com/IonPara/books-store-app-server/archive/refs/heads/main.zip)
 3. [Download **Node.js**](https://nodejs.org/dist/v18.13.0/node-v18.13.0-x64.msi)
-4. Navigate to project's books-store-app-server directory, run: **npm install** **npm start**
-5. Navigate to project's books-store-app-client directory, run: **npm install** **npm start**
+4. Navigate to project's books-store-app-server directory, create an environment variable called API_KEY and add your MongoDB api key.
+5. Run: **npm install**, **npm start**
+6. Navigate to project's books-store-app-client directory, create an environment variable called REACT_APP_API_KEY and add your GOOGLE BOOKS api key.
+7. Run: **npm install**, **npm start**
 
 
 Runs the app in the development mode.
