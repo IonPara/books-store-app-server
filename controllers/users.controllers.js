@@ -1,6 +1,9 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/mongoose");
 const bcrypt = require("bcrypt");
+let path = require("path");
+
+require("dotenv").config({ path: "./app.env" });
 
 // This middleware will find the user in the database and send it as a response
 async function getUsers(req, res) {
@@ -25,9 +28,8 @@ const login = async (req, res) => {
         let jwtToken = jwt.sign(
           {
             username: userInformation.username,
-            password: userInformation.password,
           },
-          "secretKey",
+          process.env.ACCESS_TOKEN,
           { expiresIn: "1h" }
         );
         res.json({ token: jwtToken });
@@ -46,13 +48,12 @@ const login = async (req, res) => {
 function checkJWTToken(req, res, next) {
   if (req.headers.token) {
     let token = req.headers.token;
-    jwt.verify(token, "secretKey", function (error, data) {
+    jwt.verify(token, process.env.ACCESS_TOKEN, function (error, data) {
       if (error) {
         res.send({ message: "Invalid Token" });
         next();
       } else {
         req.username = data.username;
-        req.password = data.password;
         next();
       }
     });
