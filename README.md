@@ -52,13 +52,19 @@ The goal of this project is to showcase the ability to build and deploy a full s
 
 ## Or by following these steps :point_down:
 
-1. [Download client side zip file](https://github.com/IonPara/books-store-app-client/archive/refs/heads/main.zip)
-2. [Download server zip file](https://github.com/IonPara/books-store-app-server/archive/refs/heads/main.zip)
+1. [Download client side zip file](https://github.com/IonPara/just-read-app-client/archive/refs/heads/main.zip)
+2. [Download server zip file](https://github.com/IonPara/just-read-app-server/archive/refs/heads/main.zip)
 3. [Download **Node.js**](https://nodejs.org/dist/v18.13.0/node-v18.13.0-x64.msi)
-4. Navigate to project's books-store-app-server directory, create an environment variable called API_KEY and add your MongoDB api key.
-5. Run: **npm install**, **npm start**
-6. Navigate to project's books-store-app-client directory, create an environment variable called REACT_APP_API_KEY and add your GOOGLE BOOKS api key.
-7. Run: **npm install**, **npm start**
+4. Navigate to project's just-read-app-server directory, create an environment variable called API_KEY and add your MongoDB api key, create an environment variable called ACCESS_TOKEN and create a JWT a secret key.
+5. Run: 
+<pre> npm install 
+ npm start 
+</pre>
+6. Navigate to project's just-read-app-client directory, create an environment variable called REACT_APP_API_KEY and add your GOOGLE BOOKS api key.
+7. Run: 
+<pre> npm install 
+ npm start 
+</pre>
 
 
 Runs the app in the development mode.
