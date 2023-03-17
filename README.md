@@ -22,7 +22,7 @@ The app is built using MongoDB, Express, React, and Node.js (the MERN stack).<br
 <pre>● The app authenticates users using JWT to safely transmit the information between client and server.
 ● The API keys are saved as environment variables.</pre> 
 
-:floppy_disk: The front-end of the app was deployed on [Netlify.com](https://netlify.com/)
+:floppy_disk: The front-end of the app was deployed on [Netlify.com](https://netlify.com/)<br>
 :floppy_disk: The back-end of the app was deployed on [Heroku.com](https://heroku.com/)
  <pre>  Back-end and front-end separately to make the app safer and easier to debug.</pre>
 
