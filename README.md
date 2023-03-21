@@ -9,8 +9,7 @@
  ## 📑 General Information:
  
 This repository is the backend of a full stack MERN application.
-Just Read is a book store app where the user can create an account, search for his/her favorite books, purchase a book and leave a review.
-The application allows for normal end-user access and admin access. An administrator can monitor and make changes to user's behaviour.
+Just Read is a book store application that provides users with the ability to create an account, search for their favorite books, purchase them, and leave reviews. The app supports both standard end-user access and admin access. Administrators have the ability to monitor user behavior and make any necessary changes.
 
 The books data is pulled from [google books api](https://developers.google.com/books).
 
